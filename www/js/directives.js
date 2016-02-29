@@ -54,23 +54,21 @@ var vmD, ele, cele;
             console.log(scope, element, attrs, ctrl);
             ctrl.calculateHeight();
             var jIframe = element.find('iframe');
-           /* jIframe.on('load',function function_name(argument) {
-                // body...
-            } )*/
+            jIframe.on('load', ctrl.hideSpinner)
 
-            jIframe[0].onload = function() {
-                // onSuccessLoad
-                console.log('iframe loaded');
-                ctrl.hideSpinner();
-                scope.$apply();
-                /*$ionicLoading.hide();
+            /*     jIframe[0].onload = function() {
+                     // onSuccessLoad
+                     console.log('iframe loaded');
+                     ctrl.hideSpinner();
+                     scope.$apply();
+                     // $ionicLoading.hide();
 
-                $timeout(function() {
-                    $rootScope.global.spinner = false;
+                     // $timeout(function() {
+                     //     $rootScope.global.spinner = false;
 
-                }, 10);*/
+                     // }, 10);
 
-            };
+                 };*/
         }
     }
 
@@ -99,9 +97,9 @@ var vmD, ele, cele;
             // vm.hide = true;
 
             ////con el timeout funciona bien, desde el controlador, o puedo usar el scope.apply desde la funcion link, ambos funcionan bien,seria bueno saber cual es una mejor practiva
-            // $timeout(function() {
-            vm.hide = true;
-            // }, 0);
+            $timeout(function() {
+                vm.hide = true;
+            }, 0);
         }
 
         function calculateHeight() {
