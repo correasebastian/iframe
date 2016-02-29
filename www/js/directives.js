@@ -93,8 +93,10 @@ var vmD, ele, cele;
                if (_hide === false)
                    return true;*/
             // vm.hide = true;
+
+            ////con el timeout funciona bien, desde el controlador, o puedo usar el scope.apply desde la funcion link, ambos funcionan bien,seria bueno saber cual es una mejor practiva
             // $timeout(function() {
-                vm.hide = true;
+            vm.hide = true;
             // }, 0);
         }
 

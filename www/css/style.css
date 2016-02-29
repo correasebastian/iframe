@@ -44,3 +44,8 @@
     background-color: green;
     width: 180px
 }
+
+
+.row.row-center-col{
+    justify-content: center;
+}
