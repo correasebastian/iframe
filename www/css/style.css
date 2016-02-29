@@ -27,3 +27,20 @@
     /*min-height: 47vh;*/
     min-width: 100%;
 }
+
+.iframe-esportudo {
+    /*min-height: 47vh;*/
+    min-width: 100%;
+}
+
+.red {
+    height: 200px;
+    background-color: red;
+    width: 90px
+}
+
+.transclude {
+    height: 280px;
+    background-color: green;
+    width: 180px
+}
