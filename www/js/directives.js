@@ -53,8 +53,12 @@ var vmD, ele, cele;
             ele = element;
             console.log(scope, element, attrs, ctrl);
             ctrl.calculateHeight();
+            var jIframe = element.find('iframe');
+           /* jIframe.on('load',function function_name(argument) {
+                // body...
+            } )*/
 
-            element.find('iframe')[0].onload = function() {
+            jIframe[0].onload = function() {
                 // onSuccessLoad
                 console.log('iframe loaded');
                 ctrl.hideSpinner();
